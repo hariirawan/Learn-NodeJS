@@ -1,0 +1,30 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+
+    <h3>{{ Title }}</h3>
+    <form  method="post">
+        <table>
+            <tr>
+                <td>Nim</td>
+                <td>:</td>
+                <td><input type="text" name="nim" placeholder="Nomor Induk Mahasiswa"></td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td>:</td>
+                <td><input type="text" name="nama" placeholder="Nama Lengkap"></td>
+            </tr>
+            <tr>
+                <td>Program Studi</td>
+                <td>:</td>
+                <td><input type="text" name="prodi" placeholder="Program Studi"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="submit" value="Simpan Data"></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

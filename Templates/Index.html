@@ -1,0 +1,28 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+
+    <h1>{{ Title }}</h1>
+    <table class="tabel">
+        <tr class="tr">
+            <td>Nim</td>
+            <td>Nama</td>
+            <td>Program Studi</td>
+            <td>Action</td>
+        </tr>
+        {% for d in data %}
+        <tr>
+            <td>{{ d.nim }}</td>
+            <td>{{ d.nama }}</td>
+            <td>{{ d.prodi }}</td>
+            <td>
+                <a href="/Update/{{ d.id_mhs }}">Edit</a>
+                <a href="/Delete/{{ d.id_mhs }}">Hapus</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br/>
+    <a href="/Insert">Tambah Data</a>
+
+{% endblock %}
